@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный пример небольшого каталога настольных ламп.">
+  <title>Lumen — настольные лампы</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Lumen</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#popular">Популярное</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Настольные лампы для дома и работы</h1>
+        <p>Небольшой учебный каталог с примерами семантической разметки, карточки товара и формы заявки.</p>
+        <a class="button" href="catalog.html">Перейти в каталог</a>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <div class="container">
+        <h2>Популярная модель</h2>
+        <article class="product-card">
+          <img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа Lumen One">
+          <div class="product-card__content">
+            <h3 class="product-card__title">Lumen One</h3>
+            <p>Компактная настольная лампа с направленным светом для рабочего стола.</p>
+            <p class="product-card__price">3 490 ₽</p>
+            <button class="button" type="button" id="open-order-dialog">Оставить заявку</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="advantages">
+      <div class="container">
+        <h2>Почему Lumen</h2>
+        <p>Простой дизайн, понятные характеристики и несколько базовых моделей без перегруженного каталога.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+      <p>Учебный проект Lumen</p>
+    </div>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog">
+    <form class="order-form" id="order-form" action="#" method="post">
+      <h2>Заявка на Lumen One</h2>
+
+      <label for="order-name">Имя</label>
+      <input id="order-name" name="name" type="text" minlength="2" maxlength="50" autocomplete="name" required>
+
+      <label for="order-email">E-mail</label>
+      <input id="order-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
+
+      <label for="order-phone">Телефон</label>
+      <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="\+7[0-9]{10}" autocomplete="tel" required>
+
+      <label for="order-model">Модель</label>
+      <select id="order-model" name="model" required>
+        <option value="">Выберите модель</option>
+        <option value="lumen-one">Lumen One</option>
+      </select>
+
+      <label for="order-date">Желаемая дата связи</label>
+      <input id="order-date" name="contact-date" type="date">
+
+      <input name="source" type="hidden" value="main-page">
+
+      <label for="order-comment">Комментарий</label>
+      <textarea id="order-comment" name="comment" rows="4" maxlength="300" placeholder="Дополнительная информация"></textarea>
+
+      <label class="checkbox-label" for="order-agreement">
+        <input id="order-agreement" name="agreement" type="checkbox" required>
+        Согласен на обработку данных
+      </label>
+
+      <p class="form-message" id="form-message" hidden>Заявка отправлена.</p>
+
+      <div class="form-actions">
+        <button class="button" type="submit">Отправить</button>
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
