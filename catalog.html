@@ -3,54 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог настольных ламп Lumen.">
-  <title>Каталог — Lumen</title>
+  <meta name="description" content="Каталог Pumpkin: товары, фильтры, характеристики.">
+  <title>Каталог — Pumpkin</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="index.html">Lumen</a>
+      <a class="logo" href="index.html">Pumpkin</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#popular">Популярное</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="faq.html">FAQ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="index.html">Главная</a> / <span>Каталог</span>
-      </nav>
-      <h1>Каталог</h1>
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li>Каталог</li>
+          </ol>
+        </nav>
 
-      <aside class="catalog-note">
-        <h2>Категория</h2>
-        <p>Настольные лампы</p>
-      </aside>
+        <h1>Каталог декораций</h1>
 
-      <section>
-        <h2>Модели</h2>
-        <article class="product-card">
-          <img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа Lumen One">
-          <div class="product-card__content">
-            <h3 class="product-card__title">Lumen One</h3>
-            <p>Компактная модель для рабочего стола.</p>
-            <p class="product-card__price">3 490 ₽</p>
-            <a class="button" href="contacts.html">Уточнить наличие</a>
+        <div class="catalog-layout">
+          <aside class="catalog-filters" aria-label="Фильтры каталога">
+            <h2>Категории</h2>
+            <ul>
+              <li><a href="#">Все товары</a></li>
+              <li><a href="#">Гирлянды</a></li>
+              <li><a href="#">Букеты</a></li>
+              <li><a href="#">Подсвечники</a></li>
+            </ul>
+            <h2>Цена</h2>
+            <ul>
+              <li><a href="#">до 150 ₽</a></li>
+              <li><a href="#">150–300 ₽</a></li>
+              <li><a href="#">от 300 ₽</a></li>
+            </ul>
+          </aside>
+
+          <div class="products-grid">
+            <article class="product-card product-card--discount">
+              <span class="product-card__badge">Скидка</span>
+              <img class="product-card__image" src="images/Listopad.jpg" alt="Листопад">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Гирлянда "Листопад"</h3>
+                <p class="product-card__description">Гирлянда на батарейках, 2м</p>
+                <p class="product-card__price">250 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-card__image" src="images/Osen.jpg" alt="Осень">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Искуственный букет "Осень"</h3>
+                <p class="product-card__description">Настольнаяя декорация в вазе</p>
+                <p class="product-card__price">150 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-card__image" src="images/Tykva.jpg" alt="Тыква">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Подсвчник "Тыква"</h3>
+                <p class="product-card__description">Металличский подсвечник для чайной свечи</p>
+                <p class="product-card__price">366 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-card__image" src="images/Zhyoludi.jpg" alt="Жёлуди">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Гирлянда "Жёлуди"</h3>
+                <p class="product-card__description">Гирлянда на батарейках, 1.5м</p>
+                <p class="product-card__price">300 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-card__image" src="images/Lesnoj_urozhaj.jpg" alt="Лесной урожай">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Подвесной декор "Лесной урожай"</h3>
+                <p class="product-card__description">Декоративный букет на стену</p>
+                <p class="product-card__price">147 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img class="product-card__image" src="images/Klenovyj_list.jpg" alt="Кленовый лист">
+              <div class="product-card__content">
+                <h3 class="product-card__title">Свеча в подсвечнике "Клеовый лист"</h3>
+                <p class="product-card__description">Стеклянный подсвечник с чайной свечой</p>
+                <p class="product-card__price">261 ₽</p>
+                <a class="button" href="product.html">Подробнее</a>
+              </div>
+            </article>
           </div>
-        </article>
-      </section>
-    </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><p>Учебный проект Lumen</p></div>
+    <div class="container"><p>Учебный проект Pumpkin · <a href="contacts.html">Контакты</a></p></div>
   </footer>
+
+  <a class="up-button" href="#top" aria-label="Наверх">↑</a>
+  <script src="js/main.js"></script>
 </body>
 </html>

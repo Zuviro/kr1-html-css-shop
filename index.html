@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Учебный пример небольшого каталога настольных ламп.">
-  <title>Lumen — настольные лампы</title>
+  <meta name="description" content="Учебный каталог Pumpkin: популярные товары, заявка, контакты.">
+  <title>Pumpkin — осенние декорации</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="site-header">
+<body id="top">
+  <header class="site-header" >
     <div class="container">
-      <a class="logo" href="index.html">Lumen</a>
+      <a class="logo" href="index.html">Pumpkin</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="#popular">Популярное</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="faq.html">FAQ</a></li>
         </ul>
       </nav>
     </div>
@@ -25,44 +27,68 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Настольные лампы для дома и работы</h1>
-        <p>Небольшой учебный каталог с примерами семантической разметки, карточки товара и формы заявки.</p>
+        <h1>Атмосферные декорации для дома</h1>
+        <p>Небольшой каталог с примерами семантической разметки, карточки товара и формы заявки.</p>
         <a class="button" href="catalog.html">Перейти в каталог</a>
       </div>
     </section>
 
     <section class="section" id="popular">
       <div class="container">
-        <h2>Популярная модель</h2>
-        <article class="product-card">
-          <img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа Lumen One">
-          <div class="product-card__content">
-            <h3 class="product-card__title">Lumen One</h3>
-            <p>Компактная настольная лампа с направленным светом для рабочего стола.</p>
-            <p class="product-card__price">3 490 ₽</p>
-            <button class="button" type="button" id="open-order-dialog">Оставить заявку</button>
-          </div>
-        </article>
+        <h2>Популярное</h2>
+        <div class="products-grid">
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge">Скидка</span>
+            <img class="product-card__image" src="images/Listopad.jpg" alt="Листопад">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Гирлянда "Листопад"</h3>
+              <p class="product-card__description">Гирлянда на батарейках, 2м</p>
+              <p class="product-card__price">250 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/Osen.jpg" alt="Осень">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Искуственный букет "Осень"</h3>
+              <p class="product-card__description">Настольнаяя декорация в вазе</p>
+              <p class="product-card__price">150 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/Tykva.jpg" alt="Тыква">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Подсвчник "Тыква"</h3>
+              <p class="product-card__description">Металличский подсвечник для чайной свечи</p>
+              <p class="product-card__price">366 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section section--muted" id="advantages">
       <div class="container">
-        <h2>Почему Lumen</h2>
-        <p>Простой дизайн, понятные характеристики и несколько базовых моделей без перегруженного каталога.</p>
+        <h2>Почему Pumpkin</h2>
+        <p>Яркий дизайн, доступные цены</p>
+        <p><a href="faq.html">Частые вопросы →</a></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="contacts">
     <div class="container">
-      <p>Учебный проект Lumen</p>
+      <p>Учебный проект Pumpkin · <a href="contacts.html">Контакты</a></p>
     </div>
   </footer>
 
   <dialog class="order-dialog" id="order-dialog">
     <form class="order-form" id="order-form" action="#" method="post">
-      <h2>Заявка на Lumen One</h2>
+      <h2>Заявка на покупку</h2>
 
       <label for="order-name">Имя</label>
       <input id="order-name" name="name" type="text" minlength="2" maxlength="50" autocomplete="name" required>
@@ -71,12 +97,17 @@
       <input id="order-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
 
       <label for="order-phone">Телефон</label>
-      <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="\+7[0-9]{10}" autocomplete="tel" required>
+      <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+79000000000" pattern="\+7[0-9]{10}" autocomplete="tel" required>
 
-      <label for="order-model">Модель</label>
-      <select id="order-model" name="model" required>
-        <option value="">Выберите модель</option>
-        <option value="lumen-one">Lumen One</option>
+      <label for="order-item">Товар</label>
+      <select id="order-item" name="item" required>
+        <option value="">Выберите товар</option>
+        <option value="Listopad">Гирлянда "Листопад"</option>
+        <option value="Osen">Искуственный букет "Осень"</option>
+        <option value="Tykva">Подсвечник "Тыква"</option>
+        <option value="Zhyoludi">Гирлянда "Жёлуди"</option>
+        <option value="Lesnoj_urozhaj">Подвесной декор "Лесной урожай"</option>
+        <option value="Klenovyj_list">Свеча в подсвечнике "Кленовый лист"</option>
       </select>
 
       <label for="order-date">Желаемая дата связи</label>
@@ -101,6 +132,7 @@
     </form>
   </dialog>
 
+  <a class="up-button" href="#top" aria-label="Наверх">↑</a>
   <script src="js/main.js"></script>
 </body>
 </html>
